@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/pageready/__init__.py
+src/pageready/agent.py
+src/pageready/analysis.py
+src/pageready/cli.py
+src/pageready_vision.egg-info/PKG-INFO
+src/pageready_vision.egg-info/SOURCES.txt
+src/pageready_vision.egg-info/dependency_links.txt
+src/pageready_vision.egg-info/requires.txt
+src/pageready_vision.egg-info/top_level.txt
+tests/test_golden_path.py

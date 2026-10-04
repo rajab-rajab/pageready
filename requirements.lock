@@ -1,0 +1,10 @@
+# Exact local environment captured for reproducible PageReady Vision evaluation.
+# Refresh intentionally when upgrading the validated runtime.
+fastapi==0.142.2
+httpx2==2.13.1
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+pydantic==2.13.5
+pytest==9.1.1
+python-multipart==0.0.32
+uvicorn==0.54.0

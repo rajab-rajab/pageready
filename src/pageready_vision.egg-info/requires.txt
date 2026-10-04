@@ -1,0 +1,5 @@
+numpy>=1.26
+opencv-python-headless>=4.10
+
+[dev]
+pytest>=8.0

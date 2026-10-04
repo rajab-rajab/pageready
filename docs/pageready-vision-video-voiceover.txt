@@ -1,0 +1,19 @@
+I am Rajab Baig, and this is PageReady Vision: an agentic document-quality gate built with OpenCV 5 and deployed on AWS.
+
+This video starts by proving the runtime foundation. The project environment reports OpenCV version 5.0.0. This is the computer-vision engine used to inspect each submitted page before downstream processing.
+
+PageReady Vision is designed around one clear runtime flow: QualityGateAgent receives a document image, OpenCV analyzes its visual quality, the agent selects a safe action tool, and OpenCV verifies the result before approval. The agent is the decision-maker. OpenCV is the perception and verification tool. Codex assisted during development, but it is not part of the application's production decision path.
+
+The workflow diagram shows the policy visually. OpenCV 5 measures skew, blur, contrast, and frame-edge evidence. QualityGateAgent then chooses a route. A clean, sufficient-quality page can be approved. Severe blur is never guessed or repaired: it triggers a request for a new scan. Low contrast, weak evidence, or a possible frame-edge issue is escalated for a human reviewer.
+
+The important agentic loop is the recoverable-skew path. OpenCV first measures the page angle. That measured value changes a later decision: QualityGateAgent calls the auto-correct tool with the measured angle. The corrected image is then analyzed independently by OpenCV a second time. Only a successful verification permits approval. If verification fails, the page is routed to human review. This is perception, decision, action, and verification in one traceable workflow.
+
+The architecture documentation explains the same controls. Every event is recorded in chronological order, including input receipt, OpenCV runtime provenance, visual evidence, the selected action, tool invocation, verification, human-review request where needed, and final outcome. Audit exports deliberately omit image bytes and image URLs, so the trace is useful without exposing the document itself.
+
+The evaluation covers four representative outcomes: a clean-page approval, a verified deskew approval, a rescan request for severe blur, and human-review escalation for low contrast. The expected result is four correct outcomes out of four, with zero unsafe approvals.
+
+Now we see the live PageReady Vision application running on AWS EC2. The batch contains those same four example pages. The selected low-contrast page shows why it requires review: contrast evidence is below the safety threshold, and no transformation is applied automatically.
+
+On the right, the execution trace makes the runtime provenance visible to judges. It reports OpenCV runtime 5.0.0, records the image receipt, confirms visual evidence collection, and shows the deterministic policy action. This is how PageReady Vision keeps AI-ready document intake observable, conservative, and under appropriate human control.
+
+Thank you for watching PageReady Vision.

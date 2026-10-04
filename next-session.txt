@@ -1,0 +1,38 @@
+Continue the PageReady Vision submission from this workspace:
+
+C:\Users\RAJAB BAIG\Documents\GitHub\BAIG\PageReady-Vision
+
+Read first:
+- .devpost-hackathon-state.json
+- devpost-submission.md
+- docs/technical-report.md
+- docs/agentic-vision-award-evidence.md
+- docs/demo-rehearsal.md
+
+Current verified state:
+- Official event: OpenCV AI Competition 2026, powered by AWS (`opencv26`); Devpost registration is confirmed and submissions are open.
+- Target special award: Agentic Vision Award. Do not select the COOL award without verified COOL-on-AWS-Graviton evidence.
+- OpenCV runtime: 5.0.0 / `opencv-python-headless==5.0.0.93`.
+- Evaluation: `runs/evaluation.json` reports 4/4 expected outcomes, 0 task failures, and 0 unsafe approvals.
+- Tests: `cmd /d /c .venv\Scripts\python.exe -m pytest -q` passed: 16 tests in 1.83 seconds, no warnings.
+- Trace now has `runtime_provenance`, so the OpenCV version is available in each new agent trace.
+- Submission materials created: `devpost-submission.md`, `docs/technical-report.md`, `docs/agentic-vision-award-evidence.md`, and `requirements.lock`.
+- Repository target in draft: https://github.com/rajab-rajab/BAIG/tree/main/PageReady-Vision
+
+Video status:
+- Candidate files: `export-1790872573279-voiceover.mp4` (use this one; AAC audio) and `export-1790872573279.mp4` (no audio).
+- Both are 1920x1080, 60 fps, and 53.75 seconds.
+- The current video shows first-run UI, queue outcomes, deskew evidence/trace, and low-contrast review.
+- It is not final-submission ready: recorder controls are visible, and it does not clearly show the team introduction, architecture diagram, OpenCV 5 runtime-provenance event, completed verification/approval chain, clerk override/audit export, or 4/4 evaluation result.
+- Re-record a clean 2-3 minute version following the shot list in `docs/demo-rehearsal.md`; upload it as public or unlisted and put the URL in `devpost-submission.md`.
+
+Next work:
+1. Re-record and upload the final <=5-minute video; update `devpost-submission.md` with its URL.
+2. Commit and push the latest source, tests, evaluation artifact, technical report, and submission draft so the judge-accessible repository contains the evidence.
+3. Confirm judge access to the repository/archive and either provide a web endpoint or arrange a live screen-share.
+4. Run `$prepare-submission` for a final draft check, then use `$submit-project`. Do not actually submit until the user explicitly confirms submission.
+
+Accuracy guardrails:
+- The app is a local, four-fixture synthetic-data demonstration; do not claim production accuracy.
+- Docker is ARM64-compatible only; do not claim AWS deployment, AWS Graviton execution, COOL execution, or COOL benchmark performance.
+- Frame-edge content is an escalation signal, not proof that a physical document was clipped.

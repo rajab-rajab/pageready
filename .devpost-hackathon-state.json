@@ -1,0 +1,46 @@
+{
+  "plugin": "devpost-hackathon",
+  "version": 2,
+  "hackathon": {
+    "slug": "opencv26",
+    "name": "OpenCV AI Competition 2026, powered by AWS",
+    "url": "https://opencv26.devpost.com",
+    "selected": true,
+    "source": "known"
+  },
+  "participant": {
+    "name": "",
+    "display_name": "Rajab Baig"
+  },
+  "project": {
+    "name": "PageReady Vision",
+    "summary": "A municipal-archive document-quality gate that uses OpenCV 5 evidence to correct recoverable defects, request rescans, and escalate uncertain pages to human review before OCR or LLM processing.",
+    "ai_usage": "",
+    "codex_usage": ""
+  },
+  "current_stage": "prepare-submission",
+  "completed_stages": [
+    "start-hackathon",
+    "review",
+    "resources"
+  ],
+  "rules_acknowledged": true,
+  "learning": {
+    "status": "active",
+    "current_step": "build",
+    "completed_steps": [
+      "onboard",
+      "scope",
+      "prd",
+      "spec",
+      "checklist"
+    ],
+    "plan_file": "docs/hackathon-build/scope.md",
+    "checklist_file": "docs/hackathon-build/checklist.md"
+  },
+  "submission": {
+    "draft_file": "devpost-submission.md",
+    "status": "drafting"
+  },
+  "next_command": "prepare-submission"
+}

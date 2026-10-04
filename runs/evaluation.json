@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-04T16:22:14.911725+00:00",
+  "scope": "Deterministic four-fixture smoke evaluation; not a holdout or production-accuracy result.",
+  "environment": {
+    "platform": "Windows-11-10.0.22631-SP0",
+    "machine": "AMD64",
+    "python": "3.12.10",
+    "opencv": "5.0.0"
+  },
+  "summary": {
+    "fixtures": 4,
+    "task_successes": 4,
+    "task_failures": 0,
+    "failure_fixture_names": [],
+    "unsafe_approvals": 0,
+    "unsafe_approval_fixture_names": [],
+    "outcomes": {
+      "approve": 2,
+      "request_rescan": 1,
+      "send_to_human_review": 1
+    }
+  },
+  "fixtures": [
+    {
+      "fixture": "permit-register-clean.png",
+      "expected_status": "Approved",
+      "expected_action": "approve",
+      "observed_action": "approve",
+      "matched_expected_action": true,
+      "tool_sequence": [],
+      "trace_event_types": [
+        "input_received",
+        "runtime_provenance",
+        "image_analyzed",
+        "action_selected",
+        "outcome_resolved"
+      ]
+    },
+    {
+      "fixture": "council-minutes-skewed.png",
+      "expected_status": "Approved",
+      "expected_action": "approve",
+      "observed_action": "approve",
+      "matched_expected_action": true,
+      "tool_sequence": [
+        "auto_correct",
+        "verify_corrected_page"
+      ],
+      "trace_event_types": [
+        "input_received",
+        "runtime_provenance",
+        "image_analyzed",
+        "action_selected",
+        "tool_invoked",
+        "correction_verified",
+        "outcome_resolved"
+      ]
+    },
+    {
+      "fixture": "property-card-blurred.png",
+      "expected_status": "Rescan requested",
+      "expected_action": "request_rescan",
+      "observed_action": "request_rescan",
+      "matched_expected_action": true,
+      "tool_sequence": [
+        "request_rescan"
+      ],
+      "trace_event_types": [
+        "input_received",
+        "runtime_provenance",
+        "image_analyzed",
+        "action_selected",
+        "rescan_requested",
+        "outcome_resolved"
+      ]
+    },
+    {
+      "fixture": "zoning-notice-low-contrast.png",
+      "expected_status": "Needs review",
+      "expected_action": "send_to_human_review",
+      "observed_action": "send_to_human_review",
+      "matched_expected_action": true,
+      "tool_sequence": [
+        "send_to_human_review"
+      ],
+      "trace_event_types": [
+        "input_received",
+        "runtime_provenance",
+        "image_analyzed",
+        "action_selected",
+        "human_review_requested",
+        "outcome_resolved"
+      ]
+    }
+  ]
+}
