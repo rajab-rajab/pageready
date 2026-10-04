@@ -2,6 +2,10 @@
 
 PageReady Vision is an agentic document-quality gate. It inspects an uploaded page, uses OpenCV evidence to choose a corrective or escalation tool, verifies any correction, and emits an auditable trace.
 
+## Source repository
+
+https://github.com/rajab-rajab/pageready
+
 ## Runtime flow
 
 `QualityGateAgent → OpenCV analysis → action tool → OpenCV verification`
